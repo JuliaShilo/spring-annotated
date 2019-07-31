@@ -19,15 +19,15 @@ public class UserDAO{
 
     @Autowired
 	private ConnectionFactory connectionFactory;
-	
+
 	public void saveOrUpdate(User user){
 		Session session = connectionFactory.getSessionFactory().openSession();
         session.getTransaction().begin();
         session.saveOrUpdate(user);
         session.getTransaction().commit();
-        session.close();		
+        session.close();
 	}
-	
+
 	public User findOne(Integer id){
 		Session session = connectionFactory.getSessionFactory().openSession();
         session.getTransaction().begin();
@@ -40,11 +40,12 @@ public class UserDAO{
 	public List<User> findAll(){
 		Session session = connectionFactory.getSessionFactory().openSession();
         session.getTransaction().begin();
-        
+
         String sql = "SELECT * FROM users";
-              
+
         List<User> result = session.createNativeQuery(sql).getResultList();
-        
+
+        session.getTransaction().commit();
         session.close();
         return result;
 	}

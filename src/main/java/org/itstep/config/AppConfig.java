@@ -15,15 +15,15 @@ import org.springframework.context.annotation.Primary;
 public class AppConfig {
 
     @Bean()
-    @Qualifier("h2Factory")
-    @Primary
+//    @Qualifier("h2Factory")
+//    @Primary
     public ConnectionFactory getH2Factory() {
         return new H2Factory();
     }
 
     @Bean()
-//    @Primary
-    @Qualifier("postgresFactory")
+    @Primary
+//    @Qualifier("postgresFactory")
     public ConnectionFactory getPostgresFactory() {
         return new PostgresFactory();
     }

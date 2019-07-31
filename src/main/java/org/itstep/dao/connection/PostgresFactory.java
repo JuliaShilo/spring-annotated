@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
-@Component
+//@Component
 public class PostgresFactory implements ConnectionFactory {
 
     public SessionFactory getSessionFactory() {
