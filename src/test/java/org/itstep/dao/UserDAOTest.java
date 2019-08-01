@@ -16,7 +16,7 @@ class UserDAOTest {
     @Test
     void getConnectionFactory() {
         assertNotNull(userDAO.getConnectionFactory());
-//        assertTrue(userDAO.getConnectionFactory().getClass().getSimpleName().equals("H2Factory"));
-        assertTrue(userDAO.getConnectionFactory().getClass().getSimpleName().equals("PostgresFactory"));
+        assertTrue(userDAO.getConnectionFactory().getClass().getSimpleName().equals("H2Factory"));
+//        assertTrue(userDAO.getConnectionFactory().getClass().getSimpleName().equals("PostgresFactory"));
     }
 }

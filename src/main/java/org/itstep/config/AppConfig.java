@@ -16,13 +16,13 @@ public class AppConfig {
 
     @Bean()
 //    @Qualifier("h2Factory")
-//    @Primary
+    @Primary
     public ConnectionFactory getH2Factory() {
         return new H2Factory();
     }
 
     @Bean()
-    @Primary
+//    @Primary
 //    @Qualifier("postgresFactory")
     public ConnectionFactory getPostgresFactory() {
         return new PostgresFactory();

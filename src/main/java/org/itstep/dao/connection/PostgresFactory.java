@@ -23,9 +23,9 @@ public class PostgresFactory implements ConnectionFactory {
             Properties properties = new Properties();
 
             properties.setProperty("hibernate.connection.driverClassName", "org.postgresql.Driver");
-            properties.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/e-store");
-            properties.setProperty("hibernate.connection.username", "postgres");
-            properties.setProperty("hibernate.connection.password", "248842");
+            properties.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/spring");
+            properties.setProperty("hibernate.connection.username", "julia");
+            properties.setProperty("hibernate.connection.password", "123456");
             properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
             properties.setProperty("hibernate.hbm2ddl.auto", "update");
             properties.setProperty("hibernate.show_sql", "true");
